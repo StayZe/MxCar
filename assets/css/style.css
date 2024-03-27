@@ -51,4 +51,8 @@ header, #header{
         font-size: 200%;
         font-weight: bold;
     }
+
+    #header img{
+        display: none;
+    }
 }
