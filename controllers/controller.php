@@ -3,7 +3,6 @@
 require './models/model.php';
 
 function DisplayHome(){ 
-    require_once './views/header.php';
     require './views/home.php'; 
     require_once './views/footer.php';
 }
