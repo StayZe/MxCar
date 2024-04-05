@@ -20,19 +20,15 @@
                 </div>
                 <div class="form">
                     <div class="boxInput">
-                        <img src="./assets/pictures/icone-utilisateur-gris.png" alt="Icone de pseudo">
                         <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required><br>
                     </div>
                     <div class="boxInput">
-                        <img src="./assets/pictures/arobase.png" alt="Icone d'arobase"><br>
                         <input type="text" id="email" name="email" placeholder="E-Mail" required><br>
                     </div>
                     <div class="boxInput">
-                        <img src="./assets/pictures/icone-cadenas-ouvert2.png" alt="Icone de cadenas ouvert">
                         <input type="password" id="psw" name="psw" placeholder="Password" required><br>
                     </div>
                     <div class="boxInput">
-                        <img src="./assets/pictures/icone-de-cadenas-de-securite-gris.png" alt="Icone de cadenas fermé">
                         <input type="password" id="checkPsw" name="checkPsw" placeholder="Confirm your password" required><br>
                     </div>
                 </div>

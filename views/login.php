@@ -21,11 +21,9 @@
                 </div>
                 <div class="DoubleBoxInput">
                     <div class="boxInput">
-                        <img src="./assets/pictures/icone-utilisateur-gris.png" alt="Icone de pseudo">
                         <input type="text" class="input" id="pseudo" name="pseudo" placeholder="Pseudo" required><br>
                     </div>
                     <div class="boxInput">
-                        <img src="./assets/pictures/icone-de-cadenas-de-securite-gris.png" alt="Icone de cadenas">
                         <input type="password" class="input" id="psw" name="psw" placeholder="Password" required><br>
                     </div>
                 </div>
