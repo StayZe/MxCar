@@ -8,5 +8,6 @@
 </head>
 <body>
     <?php include_once 'header.php';?>
+    <h1>Login</h1>
 </body>
 </html>
