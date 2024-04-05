@@ -12,7 +12,7 @@ function loginProcessDB() {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $psw = htmlspecialchars($_POST['psw']);
 
-    $sql = "SELECT * FROM users WHERE pseudo = :pseudo";
+    $sql = "SELECT * FROM user WHERE pseudo = :pseudo";
     $statement = $db->prepare($sql);
     $statement->bindParam(":pseudo", $pseudo);
     
@@ -43,7 +43,7 @@ function registerProcessDB(){
     $checkPsw = htmlspecialchars($_POST['checkPsw']);
 
     // Vérifier si le pseudo est déjà présent dans la base de données
-    $query = $db->prepare("SELECT pseudo FROM users WHERE pseudo = :pseudo");
+    $query = $db->prepare("SELECT pseudo FROM user WHERE pseudo = :pseudo");
     $query->bindParam(":pseudo", $pseudo);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -54,11 +54,11 @@ function registerProcessDB(){
     } else {
         if($psw == $checkPsw){
             //On vérifie que les deux mots de passe soient les mêmes, si oui, on crypte et insère dans la db
-            $sql = ("INSERT INTO users (pseudo, email, psw) VALUES (:pseudo, :email, :psw)");
+            $sql = ("INSERT INTO user (pseudo, mail, psw) VALUES (:pseudo, :mail, :psw)");
             $statement = $db->prepare($sql);
 
             $statement->bindParam(":pseudo", $pseudo);
-            $statement->bindParam(":email", $email);
+            $statement->bindParam(":mail", $email);
             $statement->bindParam(":psw", $pswHash);
 
             if($statement->execute()){
