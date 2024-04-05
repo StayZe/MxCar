@@ -30,6 +30,12 @@ header, #header{
     padding: 0 40px;
 }
 
+#header > ul.right-header > li > a{
+    list-style: none;
+    list-style-type:none;
+    text-decoration: none;
+}
+
 @media (max-width:1024px){
     #header, header, #header .left-header, #header .right-header {
         display: flex;
