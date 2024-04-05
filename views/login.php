@@ -17,7 +17,7 @@
         <div class="box-form">
             <form action="index.php?action=loginProcess" method="post">
                 <div class="titleLog">
-                    <h2>Customer login</h2>
+                    <h2>Login</h2>
                 </div>
                 <div class="DoubleBoxInput">
                     <div class="boxInput">

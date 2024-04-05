@@ -16,7 +16,7 @@
         <div class="box-form">
             <form action="index.php?action=registerProcess" method="post">
                 <div class="boxTitle">
-                    <h2>Create an account in LockHash</h2>
+                    <h2>Create an account for MxCar</h2>
                 </div>
                 <div class="form">
                     <div class="boxInput">
