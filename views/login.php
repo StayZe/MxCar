@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <div class="main-container">
     <?php include_once 'header.php';?>
     <h1>Login</h1>
+        <div class="box-form">
+            <form action="index.php?action=loginProcess" method="post">
+                <div class="titleLog">
+                    <h2>Customer login</h2>
+                </div>
+                <div class="DoubleBoxInput">
+                    <div class="boxInput">
+                        <img src="./assets/pictures/icone-utilisateur-gris.png" alt="Icone de pseudo">
+                        <input type="text" class="input" id="pseudo" name="pseudo" placeholder="Pseudo" required><br>
+                    </div>
+                    <div class="boxInput">
+                        <img src="./assets/pictures/icone-de-cadenas-de-securite-gris.png" alt="Icone de cadenas">
+                        <input type="password" class="input" id="psw" name="psw" placeholder="Password" required><br>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="loginButton" name="submit">Login</button>
+                    <input type="hidden" name="form_type" value="login">
+                </div>
+            </form>
+            <div class="creatAccount">
+                <p><a href="index.php?action=register">Create an account ?</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
