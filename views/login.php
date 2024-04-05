@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="main-container">
-    <?php include_once 'header.php';?>
+    <?php if (isset($_SESSION['pseudo']) OR isset($_COOKIE['pseudo'])){
+            include './views/headerConnected.php'; 
+        } else {
+            include './views/header.php';
+        } ?>
     <h1>Login</h1>
         <div class="box-form">
             <form action="index.php?action=loginProcess" method="post">

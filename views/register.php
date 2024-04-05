@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <?php include_once 'header.php';?>
+    <?php if (isset($_SESSION['pseudo']) OR isset($_COOKIE['pseudo'])){
+            include './views/headerConnected.php'; 
+        } else {
+            include './views/header.php';
+        } ?>
     <div class="main-container">
         <div class="box-form">
             <form action="index.php?action=registerProcess" method="post">
