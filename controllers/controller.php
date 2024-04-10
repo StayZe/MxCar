@@ -23,6 +23,10 @@ function DisplayAccountHome(){
     require './views/account-home.php';
 }
 
+function DisplayUploadCar(){
+    require './views/upload-car.php';
+}
+
 function loginProcess(){
     // Vérifie si le formulaire a été soumis
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
@@ -57,4 +61,8 @@ function logOut(){
     logOutDB();
     require("./views/home.php");
     exit; // Assure que le script se termine ici
+}
+
+function uploadCarProcess(){
+    
 }

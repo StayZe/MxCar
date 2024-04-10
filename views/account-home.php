@@ -6,6 +6,6 @@
     <title>MxCar | Account</title>
 </head>
 <body>
-    <a href="./index.php?action=carUpload">Upload a car</a>
+    <a href="./index.php?action=uploadCar">Upload a car</a>
 </body>
 </html>

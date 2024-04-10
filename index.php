@@ -19,6 +19,10 @@ if(isset($_GET['action']) && !empty($_GET['action'])){
         logOut();
     } elseif($action == 'account-home'){
         DisplayAccountHome();
+    } elseif($action == 'uploadCar'){
+        DisplayUploadCar();
+    } elseif($action == 'uploadCarProcess'){
+        uploadCarProcess();
     } else {
         DisplayError404();
     }
