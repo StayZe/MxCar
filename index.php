@@ -17,6 +17,8 @@ if(isset($_GET['action']) && !empty($_GET['action'])){
         registerProcess();
     } elseif($action == 'logOut'){
         logOut();
+    } elseif($action == 'account-home'){
+        DisplayAccountHome();
     } else {
         DisplayError404();
     }
