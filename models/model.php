@@ -1,9 +1,10 @@
 <?php
 
+// Connection à la DB 
 try {
-    $db = new PDO('mysql:host=localhost;dbname=MxCAR;charset=utf8', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=mxcar;charset=utf8', 'root', '');
 } catch (Exception $e) {
-    echo "Erreur de connexion à la base de données : ";
+    echo "PROBLEME DE CO A LA base de donnnée";
 }
 
 function loginProcessDB() {
@@ -12,7 +13,7 @@ function loginProcessDB() {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $psw = htmlspecialchars($_POST['psw']);
 
-    $sql = "SELECT * FROM user WHERE pseudo = :pseudo";
+    $sql = "SELECT * FROM users WHERE pseudo = :pseudo";
     $statement = $db->prepare($sql);
     $statement->bindParam(":pseudo", $pseudo);
     
@@ -33,6 +34,8 @@ function loginProcessDB() {
     }
 }
 
+
+
 function registerProcessDB(){
     global $db;
 
@@ -43,7 +46,7 @@ function registerProcessDB(){
     $checkPsw = htmlspecialchars($_POST['checkPsw']);
 
     // Vérifier si le pseudo est déjà présent dans la base de données
-    $query = $db->prepare("SELECT pseudo FROM user WHERE pseudo = :pseudo");
+    $query = $db->prepare("SELECT pseudo FROM users WHERE pseudo = :pseudo");
     $query->bindParam(":pseudo", $pseudo);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -54,11 +57,11 @@ function registerProcessDB(){
     } else {
         if($psw == $checkPsw){
             //On vérifie que les deux mots de passe soient les mêmes, si oui, on crypte et insère dans la db
-            $sql = ("INSERT INTO user (pseudo, mail, psw) VALUES (:pseudo, :mail, :psw)");
+            $sql = ("INSERT INTO users (pseudo, email, psw) VALUES (:pseudo, :email, :psw)");
             $statement = $db->prepare($sql);
 
             $statement->bindParam(":pseudo", $pseudo);
-            $statement->bindParam(":mail", $email);
+            $statement->bindParam(":email", $email);
             $statement->bindParam(":psw", $pswHash);
 
             if($statement->execute()){
@@ -72,6 +75,7 @@ function registerProcessDB(){
         }
     }
 }
+
 
 function  logOutDB(){
     session_destroy(); //destruction de la session
