@@ -13,11 +13,10 @@
         } else {
             include './views/header.php';
         } ?>
-    <h1>Login</h1>
         <div class="box-form">
-            <form action="index.php?action=loginProcess" method="post">
+        <form action="index.php?action=loginProcess" method="post">
                 <div class="titleLog">
-                    <h2>Login</h2>
+                    <h2>Customer login</h2>
                 </div>
                 <div class="DoubleBoxInput">
                     <div class="boxInput">
