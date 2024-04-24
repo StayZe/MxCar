@@ -55,24 +55,26 @@
             <div class="teamAndDriverStanding">
                 <div class="teamStanding">
                     <ul class="teamsList"></ul>
+
                     <!-- Pagination des équipes -->
                     <div class="teamPagination">
-                        <button onclick="firstPageTeam()">Début</button>
-                        <button onclick="previousPageTeam()">Précédent</button>
+                        <button onclick="firstPageTeam()">◄◄</button>
+                        <button onclick="previousPageTeam()">←</button>
                         <span id="teamPageNumber"></span>
-                        <button onclick="nextPageTeam()">Suivant</button>
-                        <button onclick="lastPageTeam()">Fin</button>
+                        <button onclick="nextPageTeam()">→</button>
+                        <button onclick="lastPageTeam()">►►</button>
                     </div>
                 </div>
                 <div class="driverStanding">
                     <ul class="driversList"></ul>
+                    
                     <!-- Pagination des pilotes -->
                     <div class="driverPagination">
-                        <button onclick="firstPageDriver()">Début</button>
-                        <button onclick="previousPageDriver()">Précédent</button>
+                        <button onclick="firstPageDriver()">◄◄</button>
+                        <button onclick="previousPageDriver()">←</button>
                         <span id="driverPageNumber"></span>
-                        <button onclick="nextPageDriver()">Suivant</button>
-                        <button onclick="lastPageDriver()">Fin</button>
+                        <button onclick="nextPageDriver()">→</button>
+                        <button onclick="lastPageDriver()">►►</button>
                     </div>
                 </div>
             </div>
