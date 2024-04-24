@@ -4,13 +4,17 @@ function left() {
 }
 
 function right() {
-    const WidthSlider = document.querySelector('.slider').offsetWidth;
-    document.querySelector('.slider_content_item').scrollLeft += WidthSlider;
-    if (WidthSlider.scrollLeft + slider.offsetWidth >= maxScroll) {
+    const slider = document.querySelector('.slider');
+    const sliderContent = document.querySelector('.slider_content_item');
+    const widthSlider = slider.offsetWidth;
+    const maxScroll = sliderContent.scrollWidth - slider.offsetWidth;
+    if (sliderContent.scrollLeft + slider.offsetWidth > maxScroll) {
         // Si nous sommes à la fin du slider, revenir au début
-        WidthSlider.scrollLeft = 0;
+        sliderContent.scrollLeft = 0;
     } else {
         // Sinon, faire défiler normalement
-        sliderContent.scrollLeft += WidthSlider;
+        sliderContent.scrollLeft += widthSlider;
     }
+
+    
 }
