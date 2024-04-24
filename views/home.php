@@ -24,8 +24,28 @@
         <?php else : ?>
             <p>Hi guest !</p>
         <?php endif; ?>
+
+
+
+
+
+        <!-- API F1 -->
+
+        <div class="F1-main">
+            <div class="teamAndDriverStanding">
+                <div class="inputYear">
+                    <input type="text" id="year" placeholder="Entrez une année :">
+                    <ul class="teamsList"></ul>
+                    <ul class="driversList"></ul>
+                </div>
+            </div>
+        </div>
+
     </div>
     </div>
+    <script src="./assets/js/f1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </body>
 
 </html>
