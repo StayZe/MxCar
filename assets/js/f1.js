@@ -11,7 +11,7 @@ async function fetchTeamDatas() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '87eed599ecmshe272682de6a9bcep1a9a8ejsn1eabd407da7e',
+                'X-RapidAPI-Key': '09c38ccabfmsh00d08a18391643cp12348ajsn8e8fbcf6665a',
                 'X-RapidAPI-Host': 'api-formula-1.p.rapidapi.com'
             }
         };
@@ -26,17 +26,17 @@ async function fetchTeamDatas() {
 
 inputYear.addEventListener("input", fetchTeamDatas);
 
-const renderTeamsList = () =>{
+const renderTeamsList = () => {
     teamsList.innerHTML = "<h1>Teams Ranking</h1>";
-    teamsDatas.forEach(team =>{
+    teamsDatas.forEach(team => {
         const li = document.createElement('li');
         const pPos = document.createElement('p');
         const pTeamName = document.createElement('p');
         const pPoints = document.createElement('p');
 
         pPos.textContent = "Position de l'équipe : " + team.position;
-        pTeamName.textContent = "Nom de l'équipe : " +  team.team.name;
-        pPoints.textContent = "Points gagnés : " +  team.points;
+        pTeamName.textContent = "Nom de l'équipe : " + team.team.name;
+        pPoints.textContent = "Points gagnés : " + team.points;
 
         li.appendChild(pPos);
         li.appendChild(pTeamName);
@@ -58,10 +58,10 @@ async function fetchDriversDatas() {
             }
         };
         const response = await fetch(url, options);
-        const { response : responseData } = await response.json();
+        const { response: responseData } = await response.json();
         driversDatas = responseData;
         renderDriversList();
-        
+
     } catch (error) {
         console.error(error);
     }
@@ -69,9 +69,9 @@ async function fetchDriversDatas() {
 
 inputYear.addEventListener("input", fetchDriversDatas);
 
-const renderDriversList = () =>{
+const renderDriversList = () => {
     driversList.innerHTML = "<h1>Drivers Ranking</h1>";
-    driversDatas.forEach(driver =>{
+    driversDatas.forEach(driver => {
         const li = document.createElement('li');
         const pPos = document.createElement('p');
         const pDriverName = document.createElement('p');

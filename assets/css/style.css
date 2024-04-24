@@ -5,6 +5,7 @@ body{
     margin: 0;
 }
 
+
 html body div.main-content div#header a img.logo, html body div.main-content div#header a{
     width: 75px;
     height: 75px;
@@ -99,6 +100,7 @@ header, #header{
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 10vh;
 }
 
 .slider{
