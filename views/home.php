@@ -57,6 +57,24 @@
                 <ul class="driversList"></ul>
             </div>
         </div>
+        <!-- Pagination des équipes -->
+        <div class="teamPagination">
+            <button onclick="firstPageTeam()">Début</button>
+            <button onclick="previousPageTeam()">Précédent</button>
+            <span id="teamPageNumber"></span>
+            <button onclick="nextPageTeam()">Suivant</button>
+            <button onclick="lastPageTeam()">Fin</button>
+        </div>
+
+        <!-- Pagination des pilotes -->
+        <div class="driverPagination">
+            <button onclick="firstPageDriver()">Début</button>
+            <button onclick="previousPageDriver()">Précédent</button>
+            <span id="driverPageNumber"></span>
+            <button onclick="nextPageDriver()">Suivant</button>
+            <button onclick="lastPageDriver()">Fin</button>
+        </div>
+
         <!-- END API F1 -->
 
         <script type="text/javascript" src="../assets/js/f1.js"></script>

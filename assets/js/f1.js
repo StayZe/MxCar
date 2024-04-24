@@ -1,7 +1,10 @@
 const inputYear = document.getElementById("year");
 const teamsList = document.querySelector(".teamsList");
 const driversList = document.querySelector(".driversList");
-
+const teamsPerPage = 1;
+const driversPerPage = 1;
+let currentPageTeam = 0;
+let currentPageDriver = 0;
 let teamsDatas = [];
 let driversDatas = [];
 
@@ -28,7 +31,10 @@ inputYear.addEventListener("input", fetchTeamDatas);
 
 const renderTeamsList = () => {
     teamsList.innerHTML = "<h1>Teams Ranking</h1>";
-    teamsDatas.forEach(team => {
+    const startIndex = currentPageTeam * teamsPerPage;
+    const endIndex = startIndex + teamsPerPage;
+    const teamsToDisplay = teamsDatas.slice(startIndex, endIndex);
+    teamsToDisplay.forEach(team => {
         const li = document.createElement('li');
         const pPos = document.createElement('p');
         const pTeamName = document.createElement('p');
@@ -44,6 +50,8 @@ const renderTeamsList = () => {
         li.classList.add("teamsLi-content");
 
         teamsList.appendChild(li);
+        const totalPages = Math.ceil(teamsDatas.length / teamsPerPage);
+        document.getElementById('teamPageNumber').textContent = `Page ${currentPageTeam + 1}/${totalPages}`;
     });
 }
 
@@ -71,7 +79,10 @@ inputYear.addEventListener("input", fetchDriversDatas);
 
 const renderDriversList = () => {
     driversList.innerHTML = "<h1>Drivers Ranking</h1>";
-    driversDatas.forEach(driver => {
+    const startIndex = currentPageDriver * driversPerPage;
+    const endIndex = startIndex + driversPerPage;
+    const driversToDisplay = driversDatas.slice(startIndex, endIndex);
+    driversToDisplay.forEach(driver => {
         const li = document.createElement('li');
         const pPos = document.createElement('p');
         const pDriverName = document.createElement('p');
@@ -96,5 +107,55 @@ const renderDriversList = () => {
         li.classList.add("driversLi-content");
 
         driversList.appendChild(li);
+        const totalPages = Math.ceil(driversDatas.length / driversPerPage);
+        document.getElementById('driverPageNumber').textContent = `Page ${currentPageDriver + 1}/${totalPages}`;
     });
+}
+
+function firstPageTeam() {
+    currentPageTeam = 0;
+    renderTeamsList();
+}
+
+function previousPageTeam() {
+    if (currentPageTeam > 0) {
+        currentPageTeam--;
+        renderTeamsList();
+    }
+}
+
+function nextPageTeam() {
+    if (currentPageTeam < Math.ceil(teamsDatas.length / teamsPerPage) - 1) {
+        currentPageTeam++;
+        renderTeamsList();
+    }
+}
+
+function lastPageTeam() {
+    currentPageTeam = Math.ceil(teamsDatas.length / teamsPerPage) - 1;
+    renderTeamsList();
+}
+
+function firstPageDriver() {
+    currentPageDriver = 0;
+    renderDriversList();
+}
+
+function previousPageTeam() {
+    if (currentPageDriver > 0) {
+        currentPageDriver--;
+        renderDriversList();
+    }
+}
+
+function nextPageTeam() {
+    if (currentPageDriver < Math.ceil(driversDatas.length / driversPerPage) - 1) {
+        currentPageDriver++;
+        renderDriversList();
+    }
+}
+
+function lastPageTeam() {
+    currentPageDriver = Math.ceil(driversDatas.length / driversPerPage) - 1;
+    renderDriversList();
 }
