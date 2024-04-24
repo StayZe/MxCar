@@ -27,6 +27,10 @@ function DisplayUploadCar(){
     require './views/upload-car.php';
 }
 
+function DisplayHistory(){
+    require './views/history.php';
+}
+
 function loginProcess(){
     // Vérifie si le formulaire a été soumis
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {

@@ -10,11 +10,11 @@
 
 <body>
     <div class="main-content">
-        <?php if (isset($_SESSION['pseudo']) or isset($_COOKIE['pseudo'])) {
-            include './views/headerConnected.php';
-        } else {
-            include './views/header.php';
-        } ?>
+            <?php if (isset($_SESSION['pseudo']) or isset($_COOKIE['pseudo'])) {
+                include './views/headerConnected.php';
+            } else {
+                include './views/header.php';
+            } ?>
 
         <div class="start">
             <h1>Home</h1>

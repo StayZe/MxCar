@@ -1,4 +1,5 @@
 <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+<link rel="stylesheet" href="./assets/css/style.css">
 
 <?php
 require './controllers/controller.php';
@@ -25,6 +26,8 @@ if(isset($_GET['action']) && !empty($_GET['action'])){
         DisplayUploadCar();
     } elseif($action == 'uploadCarProcess'){
         uploadCarProcess();
+    } elseif($action == 'history'){
+        displayHistory(); 
     } else {
         DisplayError404();
     }
