@@ -64,6 +64,11 @@ header, #header{
     list-style: none;
 }
 
+.teamStanding, .driverStanding{
+    display: flex;
+    flex-direction: column;
+    
+}
 
 /* FIN API F1 */
 

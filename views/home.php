@@ -53,27 +53,33 @@
                 <input type="text" id="year" placeholder="Entrez une année :">
             </div>
             <div class="teamAndDriverStanding">
-                <ul class="teamsList"></ul>
-                <ul class="driversList"></ul>
+                <div class="teamStanding">
+                    <ul class="teamsList"></ul>
+                    <!-- Pagination des équipes -->
+                    <div class="teamPagination">
+                        <button onclick="firstPageTeam()">Début</button>
+                        <button onclick="previousPageTeam()">Précédent</button>
+                        <span id="teamPageNumber"></span>
+                        <button onclick="nextPageTeam()">Suivant</button>
+                        <button onclick="lastPageTeam()">Fin</button>
+                    </div>
+                </div>
+                <div class="driverStanding">
+                    <ul class="driversList"></ul>
+                    <!-- Pagination des pilotes -->
+                    <div class="driverPagination">
+                        <button onclick="firstPageDriver()">Début</button>
+                        <button onclick="previousPageDriver()">Précédent</button>
+                        <span id="driverPageNumber"></span>
+                        <button onclick="nextPageDriver()">Suivant</button>
+                        <button onclick="lastPageDriver()">Fin</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Pagination des équipes -->
-        <div class="teamPagination">
-            <button onclick="firstPageTeam()">Début</button>
-            <button onclick="previousPageTeam()">Précédent</button>
-            <span id="teamPageNumber"></span>
-            <button onclick="nextPageTeam()">Suivant</button>
-            <button onclick="lastPageTeam()">Fin</button>
-        </div>
 
-        <!-- Pagination des pilotes -->
-        <div class="driverPagination">
-            <button onclick="firstPageDriver()">Début</button>
-            <button onclick="previousPageDriver()">Précédent</button>
-            <span id="driverPageNumber"></span>
-            <button onclick="nextPageDriver()">Suivant</button>
-            <button onclick="lastPageDriver()">Fin</button>
-        </div>
+
+
 
         <!-- END API F1 -->
 

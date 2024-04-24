@@ -141,21 +141,21 @@ function firstPageDriver() {
     renderDriversList();
 }
 
-function previousPageTeam() {
+function previousPageDriver() {
     if (currentPageDriver > 0) {
         currentPageDriver--;
         renderDriversList();
     }
 }
 
-function nextPageTeam() {
+function nextPageDriver() {
     if (currentPageDriver < Math.ceil(driversDatas.length / driversPerPage) - 1) {
         currentPageDriver++;
         renderDriversList();
     }
 }
 
-function lastPageTeam() {
+function lastPageDriver() {
     currentPageDriver = Math.ceil(driversDatas.length / driversPerPage) - 1;
     renderDriversList();
 }
