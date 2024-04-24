@@ -18,7 +18,7 @@ async function fetchTeamDatas() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '09c38ccabfmsh00d08a18391643cp12348ajsn8e8fbcf6665a',
+                'X-RapidAPI-Key': '', //Mettre la clé API
                 'X-RapidAPI-Host': 'api-formula-1.p.rapidapi.com'
             }
         };
@@ -70,7 +70,7 @@ async function fetchDriversDatas() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '87eed599ecmshe272682de6a9bcep1a9a8ejsn1eabd407da7e',
+                'X-RapidAPI-Key': '', // Mettre la clé API
                 'X-RapidAPI-Host': 'api-formula-1.p.rapidapi.com'
             }
         };
