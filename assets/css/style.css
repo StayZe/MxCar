@@ -99,13 +99,33 @@ header, #header{
     }
 }
 
+/* ============= BODY ============= */
+
+.start{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.start h1{
+    padding: 0;
+    margin: 0;
+}
+
+.start p{
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+/* =============// BODY //============= */
+
+
 /* ======================= SLIDER ========================== */
 
 #slider{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 10vh;
 }
 
 .slider{
