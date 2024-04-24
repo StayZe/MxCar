@@ -1,0 +1,30 @@
+{
+    "car":[
+        {
+            "brand":"Mazda",
+            "model":"Mx-5",
+            "description":"Mazda mx-5 nbfl de 2004, 110cv et 116 000km",
+            "year":"2004",
+            "color":"Titanium Grey",
+            "mileage":"116000",
+            "engine":"B6-ZE",
+            "fuel":"petrol",
+            "price":"7300",
+            "hp":"110",
+            "picture":"./assets/pictures/mx5-1"
+        },
+        {
+            "model":"",
+            "description":"",
+            "brand":"",
+            "year":"",
+            "color":"",
+            "mileage":"",
+            "engine":"",
+            "fuel":"",
+            "price":"",
+            "hp":"",
+            "picture":""
+        }
+    ]
+}

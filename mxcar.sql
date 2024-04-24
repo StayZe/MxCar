@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 05 avr. 2024 à 10:56
+-- Généré le : mer. 10 avr. 2024 à 13:29
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -37,31 +37,33 @@ CREATE TABLE IF NOT EXISTS `car` (
   `hp` int DEFAULT NULL,
   `type` varchar(30) DEFAULT NULL,
   `km` int DEFAULT NULL,
+  `picture` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `pseudo` varchar(256) DEFAULT NULL,
-  `mail` varchar(256) DEFAULT NULL,
+  `email` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `psw` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `likes` int DEFAULT NULL,
+  `profilePicture` blob,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `user`
+-- Déchargement des données de la table `users`
 --
 
-INSERT INTO `user` (`id`, `pseudo`, `mail`, `psw`, `likes`) VALUES
-(1, 'AKz4aFR', 'ethan23.rieu@gmail.com', '$2y$10$ZsxbITWmhpxVqYvFthG5oO2Z.ihZDW2ZssNrCWOeg6j2bJ7GkQrh2', NULL);
+INSERT INTO `users` (`id`, `pseudo`, `email`, `psw`, `likes`, `profilePicture`) VALUES
+(3, 'AKz4aFR', 'ethan23.rieu@gmail.com', '$2y$10$LotB8yS3BCCyufGAmNulB.t6UDVAcJ2zxspSm9nX8thHM97IANzpG', NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

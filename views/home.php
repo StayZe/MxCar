@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script type="text/javascript" src="../assets/js/script.js"></script>
+    <script src="./assets/js/f1.js"></script>
     <title>MxCar | Home</title>
 </head>
 
@@ -25,9 +26,26 @@
         <?php else : ?>
             <p>Hi guest !</p>
         <?php endif; ?>
-    </div>
-    </div>
 
+
+
+
+
+        <!-- API F1 -->
+
+        <div class="F1-main">
+
+            <div class="inputYear">
+                <input type="text" id="year" placeholder="Entrez une année :">
+            </div>
+            <div class="teamAndDriverStanding">
+                <ul class="teamsList"></ul>
+                <ul class="driversList"></ul>
+            </div>
+        </div>
+
+    </div>
+    </div>
     <div id="slider">
         <div class="slider">
             <div class="slider_content">
