@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/script.js"></script>
+    <script src="./assets/js/f1.js"></script>
     <title>MxCar | Home</title>
 </head>
 
@@ -44,7 +46,24 @@
 
     </div>
     </div>
-    <script src="./assets/js/f1.js"></script>
+    <div id="slider">
+        <div class="slider">
+            <div class="slider_content">
+                <div class="slider_content_item">
+                    <img src="../assets/img/1.jpeg">
+                    <img src="../assets/img/2.jpeg">
+                    <img src="../assets/img/3.jpeg">
+                    <img src="../assets/img/4.jpeg">
+                    <img src="../assets/img/5.jpeg">
+                </div>
+            </div>
+
+            <div class="slider_nav">
+                <button onclick="left()" class="left-arrow"><img src="../assets/img/left.png"></button>
+                <button onclick="right()" class="right-arrow"><img src="../assets/img/right.png"></button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

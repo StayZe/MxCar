@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+
 <?php
 require './controllers/controller.php';
 session_start();
