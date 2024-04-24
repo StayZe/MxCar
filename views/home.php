@@ -16,8 +16,11 @@
         } else {
             include './views/header.php';
         } ?>
-        <h1>Home</h1>
+    </div>
+    </div>
 
+    <div class="start">
+        <h1>Home</h1>
         <?php if (isset($_SESSION['pseudo'])) : ?>
             <p>Hi <?php echo $_SESSION['pseudo']; ?>!</p>
         <?php elseif (isset($_COOKIE['pseudo'])) : ?>
@@ -25,7 +28,6 @@
         <?php else : ?>
             <p>Hi guest !</p>
         <?php endif; ?>
-    </div>
     </div>
 
     <div id="slider">
