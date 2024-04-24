@@ -10,8 +10,8 @@
 
 <body>
     <div class="main-content">
-    <?php if (isset($_SESSION['pseudo']) OR isset($_COOKIE['pseudo'])){
-            include './views/headerConnected.php'; 
+        <?php if (isset($_SESSION['pseudo']) or isset($_COOKIE['pseudo'])) {
+            include './views/headerConnected.php';
         } else {
             include './views/header.php';
         } ?>
@@ -32,20 +32,19 @@
         <!-- API F1 -->
 
         <div class="F1-main">
+
+            <div class="inputYear">
+                <input type="text" id="year" placeholder="Entrez une année :">
+            </div>
             <div class="teamAndDriverStanding">
-                <div class="inputYear">
-                    <input type="text" id="year" placeholder="Entrez une année :">
-                    <ul class="teamsList"></ul>
-                    <ul class="driversList"></ul>
-                </div>
+                <ul class="teamsList"></ul>
+                <ul class="driversList"></ul>
             </div>
         </div>
 
     </div>
     </div>
     <script src="./assets/js/f1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
 </body>
 
 </html>

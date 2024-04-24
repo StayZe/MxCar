@@ -36,6 +36,31 @@ header, #header{
     text-decoration: none;
 }
 
+
+/* API F1 */
+.F1-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamAndDriverStanding{
+    display: flex;
+    flex-direction: row;
+}
+
+.teamsList, .driversList{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 20vw;
+    text-align: center;
+    list-style: none;
+}
+
+
+/* FIN API F1 */
+
 @media (max-width:1024px){
     #header, header, #header .left-header, #header .right-header {
         display: flex;
