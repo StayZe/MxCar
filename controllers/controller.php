@@ -19,6 +19,14 @@ function DisplayError404(){
     require './views/error404.php'; 
 }
 
+function DisplayAccountHome(){
+    require './views/account-home.php';
+}
+
+function DisplayUploadCar(){
+    require './views/upload-car.php';
+}
+
 function loginProcess(){
     // Vérifie si le formulaire a été soumis
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
@@ -50,16 +58,11 @@ function registerProcess(){
 }
 
 function logOut(){
-    // Vérifie si le formulaire a été soumis
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-        // Vérifie le type d'action
-        if ($_POST["form_type"] == "logout") {
-            // Appelle la fonction logOutDB() pour se déconnecter
-            if (logOutDB()) {
-                // Redirige vers la page home.php si l'ajout est réussi
-                require("./views/home.php");
-                exit; // Assure que le script se termine ici
-            }
-        }
-    }
+    logOutDB();
+    require("./views/home.php");
+    exit; // Assure que le script se termine ici
+}
+
+function uploadCarProcess(){
+    
 }

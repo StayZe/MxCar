@@ -80,5 +80,5 @@ function registerProcessDB(){
 function  logOutDB(){
     session_destroy(); //destruction de la session
     setcookie("pseudo", $_COOKIE['pseudo'], time() - 600, "/"); // Et du cookie pseudo 
-    header("Location:./index.php?action=home");
+    header("Location: ./index.php?action=home");
 }
