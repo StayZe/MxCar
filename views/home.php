@@ -57,6 +57,7 @@
             </div>
             <div class="teamAndDriverStanding">
                 <div class="teamStanding">
+                <h1>Teams Ranking</h1>
                     <ul class="teamsList"></ul>
 
                     <!-- Pagination des équipes -->
@@ -69,6 +70,7 @@
                     </div>
                 </div>
                 <div class="driverStanding">
+                <h1>Drivers Ranking</h1>
                     <ul class="driversList"></ul>
 
                     <!-- Pagination des pilotes -->

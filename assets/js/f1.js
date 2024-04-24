@@ -1,14 +1,18 @@
 const inputYear = document.getElementById("year");
 const teamsList = document.querySelector(".teamsList");
 const driversList = document.querySelector(".driversList");
-const teamsPerPage = 1;
-const driversPerPage = 1;
+const teamsPerPage = 3;
+const driversPerPage = 2;
 let currentPageTeam = 0;
 let currentPageDriver = 0;
 let teamsDatas = [];
 let driversDatas = [];
 
 async function fetchTeamDatas() {
+
+    let year = inputYear.value
+    if (!year.match(/^[0-9]{4}$/))
+        return;
     try {
         const url = `https://api-formula-1.p.rapidapi.com/rankings/teams?season=${inputYear.value}`;
         const options = {
@@ -30,7 +34,7 @@ async function fetchTeamDatas() {
 inputYear.addEventListener("input", fetchTeamDatas);
 
 const renderTeamsList = () => {
-    teamsList.innerHTML = "<h1>Teams Ranking</h1>";
+    teamsList.innerHTML = "";
     const startIndex = currentPageTeam * teamsPerPage;
     const endIndex = startIndex + teamsPerPage;
     const teamsToDisplay = teamsDatas.slice(startIndex, endIndex);
@@ -56,6 +60,11 @@ const renderTeamsList = () => {
 }
 
 async function fetchDriversDatas() {
+
+    let year = inputYear.value
+    if (!year.match(/^[0-9]{4}$/))
+        return;
+
     try {
         const url = `https://api-formula-1.p.rapidapi.com/rankings/drivers?season=${inputYear.value}`;
         const options = {
@@ -78,7 +87,7 @@ async function fetchDriversDatas() {
 inputYear.addEventListener("input", fetchDriversDatas);
 
 const renderDriversList = () => {
-    driversList.innerHTML = "<h1>Drivers Ranking</h1>";
+    driversList.innerHTML = "";
     const startIndex = currentPageDriver * driversPerPage;
     const endIndex = startIndex + driversPerPage;
     const driversToDisplay = driversDatas.slice(startIndex, endIndex);
