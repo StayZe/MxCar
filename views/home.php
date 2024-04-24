@@ -15,15 +15,18 @@
         } else {
             include './views/header.php';
         } ?>
-        <h1>Home</h1>
 
-        <?php if (isset($_SESSION['pseudo'])) : ?>
-            <p>Hi <?php echo $_SESSION['pseudo']; ?>!</p>
-        <?php elseif (isset($_COOKIE['pseudo'])) : ?>
-            <p>Hi <?php echo $_COOKIE['pseudo']; ?>!</p>
-        <?php else : ?>
-            <p>Hi guest !</p>
-        <?php endif; ?>
+        <div class="start">
+            <h1>Home</h1>
+
+            <?php if (isset($_SESSION['pseudo'])) : ?>
+                <p>Hi <?php echo $_SESSION['pseudo']; ?>!</p>
+            <?php elseif (isset($_COOKIE['pseudo'])) : ?>
+                <p>Hi <?php echo $_COOKIE['pseudo']; ?>!</p>
+            <?php else : ?>
+                <p>Hi guest !</p>
+            <?php endif; ?>
+        </div>
 
         <!-- SLIDER -->
         <div id="slider">
@@ -67,7 +70,7 @@
                 </div>
                 <div class="driverStanding">
                     <ul class="driversList"></ul>
-                    
+
                     <!-- Pagination des pilotes -->
                     <div class="driverPagination">
                         <button onclick="firstPageDriver()">◄◄</button>
