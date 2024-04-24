@@ -51,7 +51,13 @@ const renderTeamsList = () => {
 
         teamsList.appendChild(li);
         const totalPages = Math.ceil(teamsDatas.length / teamsPerPage);
+    const teamPagination = document.querySelector(".teamPagination");
+    if (teamsToDisplay.length > 0) {
+        teamPagination.style.display = "block"; // Afficher la pagination
         document.getElementById('teamPageNumber').textContent = `Page ${currentPageTeam + 1}/${totalPages}`;
+    } else {
+        teamPagination.style.display = "none"; // Masquer la pagination
+    }
     });
 }
 
